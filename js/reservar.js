@@ -176,7 +176,8 @@
     $("#flow").hidden = true;
     $("#doneSummary").innerHTML = summaryHTML({ name: b.service_name, price: b.price }, b.starts_at);
     $("#doneEmail").hidden = !email;
-    $("#doneEmail").textContent = email ? `Te enviamos la confirmación a ${email}. Revisa también la carpeta de spam.` : "";
+    $("#doneEmail").textContent = email ? `Te enviamos la confirmación a ${email}.` : "";
+    $("#spamTip").hidden = !email;
 
     // iPhone: archivo de calendario con alarma. Android: Google Calendar.
     if (U.isApple()) {
